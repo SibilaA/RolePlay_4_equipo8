@@ -36,11 +36,13 @@ namespace RoleplayGame.Encounters
                 else
                 {
                     this.Reporter.ReportDead(this.Character2);
+                    this.getGanador = Character1;
                 }
             }
             if (this.Character1.IsDead)
             {
                 this.Reporter.ReportDead(this.Character1);
+                this.getGanador = Character2;
             }
         }
 

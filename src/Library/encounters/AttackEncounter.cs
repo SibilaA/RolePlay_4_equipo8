@@ -44,6 +44,13 @@ namespace RoleplayGame.Encounters
             }
         }
 
+        private Character getGanador {get; set;}
+
+        public Character GetGanador()
+        {
+            return this.getGanador;
+        }
+
         /// <summary>
         /// Retorna verdadero si ambos personajes están vivos.
         /// </summary>

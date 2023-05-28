@@ -3,7 +3,7 @@ namespace RoleplayGame.Items
     /// <summary>
     /// Gema para el guante.
     /// </summary>
-    public class GemaVioleta: IGemas
+    public class GemaRoja: IGemas
     {
         /// <summary>
         /// El poder de ataque
@@ -13,7 +13,7 @@ namespace RoleplayGame.Items
         {
             get
             {
-                return 76;
+                return 10;
             }
         }
 
@@ -25,7 +25,7 @@ namespace RoleplayGame.Items
         {
             get
             {
-                return 45;
+                return 50;
             }
         }
 

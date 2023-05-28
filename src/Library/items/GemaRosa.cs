@@ -1,7 +1,7 @@
 namespace RoleplayGame.Items
 {
     /// <summary>
-    /// Magia. Permite atacar y defender.
+    /// Gema para el guante.
     /// </summary>
     public class GemaRosa: IGemas
     {

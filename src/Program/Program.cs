@@ -34,7 +34,6 @@ namespace Program
             //Segundo Encuentro
             Character p3 = new Wizard("Gandalf");
             p3.AddItem(new BastonMagico());
-            p3.AddItem(new Magic());
 
             Character p4 = new Troll("Olog-Hai");
 

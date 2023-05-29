@@ -15,14 +15,23 @@ namespace Program
             scenario.Setup();
             scenario.Run();
             */
-            //Primer Encuentro
-            Character p1 = new Elf("Link");
+            
+            //Config Inicial
             GuanteDeGemas guante1 = new GuanteDeGemas();
             guante1.AddGema(new GemaRosa());
-            p1.AddItem(guante1);
+            RandomObject arma1 = new RandomObject();
+            RandomObject arma2 = new RandomObject();
+            arma1.AddObject(guante1);
+            arma2.AddObject(guante1);
+            
+            //Primer Encuentro
+            Character p1 = new Elf("Link");
+            p1.AddItem(arma1.PickObject());
+            p1.AddItem(arma2.PickObject());
 
             Character p2 = new Dwarves("Ganon");
-            p2.AddItem(new Espada());
+            p2.AddItem(arma1.PickObject());
+            p2.AddItem( arma2.PickObject());
 
             ConsoleReporter console1 = new ConsoleReporter();
             AttackEncounter e1 = new AttackEncounter(p1, p2);
@@ -30,12 +39,15 @@ namespace Program
             e1.DoEncounter();
             Character g1 = e1.GetGanador();
             Console.WriteLine($"El ganador es {g1.Name}");
-
+            
             //Segundo Encuentro
             Character p3 = new Wizard("Gandalf");
-            p3.AddItem(new BastonMagico());
+            p3.AddItem(arma1.PickObject());
+            p3.AddItem( arma2.PickObject());
 
             Character p4 = new Troll("Olog-Hai");
+            p4.AddItem(arma1.PickObject());
+            p4.AddItem( arma2.PickObject());
 
             ConsoleReporter console2 = new ConsoleReporter();
             AttackEncounter e2 = new AttackEncounter(p3, p4);
@@ -51,8 +63,8 @@ namespace Program
             e3.Reporter = console3;
             e3.DoEncounter();
             Character g3 = e3.GetGanador();
-            Console.WriteLine($"El campeon de la Tierra media es {g3.Name}");
-
+            Console.WriteLine($"El campeon de la Tierra Media es {g3.Name}");
+            
         }
     }
 }
